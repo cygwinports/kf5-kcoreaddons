@@ -1,0 +1,31 @@
+inherit kf5
+
+NAME="kf5-kcoreaddons"
+VERSION=5.9.0
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE 5 core classes library"
+DESCRIPTION="KCoreAddons provides classes built on top of QtCore to perform
+various tasks such as manipulating mime types, autosaving files, creating
+backup files, generating random sequences, performing text manipulations such
+as macro replacement, accessing user information and many more."
+
+PATCH_URI="5.9.0-cygwin.patch"
+
+PKG_NAMES="libKF5CoreAddons5 libKF5CoreAddons-devel"
+libKF5CoreAddons5_CONTENTS="
+	etc/postinstall/
+	usr/bin/cygKF5CoreAddons-5.dll
+	usr/share/doc/
+	usr/share/locale/
+	usr/share/mime/
+"
+libKF5CoreAddons_devel_REQUIRES="libQt5Core-devel"
+libKF5CoreAddons_devel_CONTENTS="
+	usr/bin/desktoptojson.exe
+	usr/include/KF5/KCoreAddons/
+	usr/include/KF5/kcoreaddons_version.h
+	usr/lib/cmake/KF5CoreAddons/
+	${QT5_MKSPECSDIR#/}/modules/qt_KCoreAddons.pri
+	usr/lib/libKF5CoreAddons.dll.a
+"
