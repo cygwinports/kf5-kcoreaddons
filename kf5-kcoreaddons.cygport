@@ -1,7 +1,7 @@
 inherit kf5
 
 NAME="kf5-kcoreaddons"
-VERSION=5.12.0
+VERSION=5.27.0
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE 5 core classes library"
@@ -14,9 +14,9 @@ PATCH_URI="5.9.0-cygwin.patch"
 
 PKG_NAMES="libKF5CoreAddons5 libKF5CoreAddons-devel"
 libKF5CoreAddons5_CONTENTS="
-	etc/postinstall/
 	usr/bin/cygKF5CoreAddons-5.dll
 	usr/share/doc/
+	usr/share/kf5/licenses/
 	usr/share/locale/
 	usr/share/mime/
 "
